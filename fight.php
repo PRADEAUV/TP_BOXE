@@ -13,7 +13,7 @@ public $tempstrength2;
 
 public function fighting($boxer1,$boxer2)
 {
-    //var temporraire pour stocker les valeurs initiales de la force des boxers
+    //var temporaire pour stocker les valeurs initiales de la force des boxers
     $tempstrength1=$boxer1->strength;
     $tempstrength2=$boxer2->strength;
     echo " La stamina de $boxer1->name est $boxer1->stamina \n";

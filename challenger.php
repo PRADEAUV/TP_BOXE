@@ -33,8 +33,8 @@ Class Challenger
         if (is_int($arg)) 
         {
              $this->strength=$arg;
-       
          }
+         else false;
     }
     public function Getstrength()
     {
@@ -47,7 +47,7 @@ Class Challenger
         {
              $this->speed=$arg;
         }
-       
+        else false;
     }
     public function GetSpeed()
     {
@@ -60,7 +60,7 @@ Class Challenger
         {
              $this->stamina=$arg;
         }
-       
+        else false;
     }
     public function GetStamina()
     {

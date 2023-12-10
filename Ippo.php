@@ -33,8 +33,8 @@ Class Ippo
         if (is_int($arg)) 
         {
              $this->strength=$arg;
-       
          }
+         else false;
     }
     public function Getstrength()
     {
@@ -47,7 +47,7 @@ Class Ippo
         {
              $this->speed=$arg;
         }
-       
+        else false;
     }
     public function GetSpeed()
     {
@@ -60,7 +60,7 @@ Class Ippo
         {
              $this->stamina=$arg;
         }
-       
+        else false;
     }
     public function GetStamina()
     {
