@@ -102,7 +102,6 @@ echo  ($boxer1->stamina>$boxer2->stamina)? $boxer1->name. " est le vainqueur!!!"
 public function fincombatAvtDixRound($boxer1,$boxer2)
 {
     echo ($boxer1->stamina>$boxer2->stamina)?$boxer1->name. " est le vainqueur!!! \n": $boxer2->name. " est le vainqueur!!!";
-   
     exit ("Fin du Combat avant les 10 rounds! \n");
 }
 //********************************************** */
