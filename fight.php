@@ -76,7 +76,7 @@ public function boucleRounds($arg1,$arg2)
         {
             $this->fincombatAvtDixRound($arg1,$arg2);
          }
-    echo'round'. $i ." \n";
+    echo'round '. $i ." \n";
     // probabilité d'un coup critique
     $this->probKO($arg1,$arg2);
     // Baisse de la stamina
