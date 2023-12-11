@@ -1,6 +1,6 @@
 <?php
 // version  avec une fonction pour les boucles
-// version avec les deux joueurs frappent  dans un round----il faudra revoir la notion avec la vitesse et le 1er coup  dans la boucle
+// version avec les deux joueurs frappent  dans un round
 require_once ('Ippo.php');
 require_once ('challenger.php');
 
@@ -71,9 +71,13 @@ public function boucleRounds($arg1,$arg2)
     $this->probKO($arg1,$arg2);
     // baisse de la stamina
     $arg2->stamina=$arg2->stamina-$arg1->strength;
-     echo " La stamina de $arg1->name est $arg1->stamina \n";
+     echo " La stamina de $arg2->name est $arg2->stamina \n";
+    if (($arg1->stamina<=0) || ($arg2->stamina<=0) ) 
+    {
+        $this->fincombatAvtDixRound($arg1,$arg2);
+     }
     $arg1->stamina=$arg1->stamina-$arg2->strength;
-    echo " La stamina de $arg2->name est $arg2->stamina \n";
+    echo " La stamina de $arg1->name est $arg1->stamina \n";
     // les valeurs de la force sont remises à leur valeurs initiales
     $arg1->strength=$this->tempstrength1;
     $arg2->strength=$this->tempstrength2;
