@@ -40,14 +40,14 @@ public function fincombatAvtDixRound($boxer1,$boxer2)
 //********************************************** */
 Public function probKO($boxer1,$boxer2)
 {
-    $this->prob=random_int(0,1);
+    $this->prob=random_int(0,2);
     echo "la probabilité du KO est ". $this->prob."\n";
-    if ($this->prob==1)
+    if ($this->prob==0)
         {
             $boxer1->strength*=2;
             echo ' La force est '.$boxer1->strength. '  ' .$boxer2->strength." \n"; 
         }
-    else
+    elseif ($this->prob==1)
     {
         $boxer2->strength*=2;
         echo ' La force est '.$boxer1->strength. '  ' .$boxer2->strength." \n"; 
