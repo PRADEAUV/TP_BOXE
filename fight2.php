@@ -58,7 +58,7 @@ public function boucleRounds($arg1,$arg2)
 {
     $this->tempstrength1=$arg1->strength;
     $this->tempstrength2=$arg2->strength;
-    for ($i=1; $i <10; $i++) //boucle des rounds
+    for ($i=1; $i <=10; $i++) //boucle des rounds
 { 
     if (($arg1->stamina<=0) || ($arg2->stamina<=0) ) 
     {
@@ -71,24 +71,8 @@ public function boucleRounds($arg1,$arg2)
     $this->probKO($arg1,$arg2);
     // baisse de la stamina
     $arg2->stamina=$arg2->stamina-$arg1->strength;
+     echo " La stamina de $arg1->name est $arg1->stamina \n";
     $arg1->stamina=$arg1->stamina-$arg2->strength;
-    echo " La stamina de $arg1->name est $arg1->stamina \n";
-    echo " La stamina de $arg2->name est $arg2->stamina \n";
-    // les valeurs de la force sont remises à leur valeurs initiales
-    $arg1->strength=$this->tempstrength1;
-    $arg2->strength=$this->tempstrength2;
-    $i++;
-    if (($arg1->stamina<=0) || ($arg2->stamina<=0) ) 
-        {
-            $this->fincombatAvtDixRound($arg1,$arg2);
-         }
-    echo'round '. $i ." \n";
-    // probabilité d'un coup critique
-    $this->probKO($arg1,$arg2);
-    // Baisse de la stamina
-    $arg1->stamina=$arg1->stamina-$arg2->strength;
-    $arg2->stamina=$arg2->stamina-$arg1->strength;
-    echo " La stamina de $arg1->name est $arg1->stamina \n";
     echo " La stamina de $arg2->name est $arg2->stamina \n";
     // les valeurs de la force sont remises à leur valeurs initiales
     $arg1->strength=$this->tempstrength1;
